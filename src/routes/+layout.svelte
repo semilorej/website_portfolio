@@ -262,7 +262,9 @@
 								tasks. The app includes features such as task categorization, due dates, and the
 								ability to mark tasks as complete.
 							</p>
-							<a href="your_link_for_project_2" class="btn btn-purple rounded-pill">Details</a>
+							<a href="https://todolistbysemilore.vercel.app/" class="btn btn-purple rounded-pill"
+								>Details</a
+							>
 						</div>
 					</div>
 				</div>
