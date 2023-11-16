@@ -282,7 +282,7 @@
 								multiplication, and division. The calculator includes a clear display, easy-to-use
 								buttons, and a responsive design for seamless use on various devices.
 							</p>
-							<a href="http://127.0.0.1:5173/" class="btn btn-purple rounded-pill">Details</a>
+							<a href='https://semilorecalculator.vercel.app/' class="btn btn-purple rounded-pill">Details</a>
 						</div>
 					</div>
 				</div>
