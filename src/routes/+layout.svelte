@@ -244,7 +244,9 @@
 								showcase a variety of eye-related products, including glasses, contact lenses, and
 								accessories.
 							</p>
-							<a href="your_link_for_project_1" class="btn btn-purple rounded-pill">Details</a>
+							<a href="https://e-commerce-eye-store.vercel.app/" class="btn btn-purple rounded-pill"
+								>Details</a
+							>
 						</div>
 					</div>
 				</div>
@@ -282,7 +284,9 @@
 								multiplication, and division. The calculator includes a clear display, easy-to-use
 								buttons, and a responsive design for seamless use on various devices.
 							</p>
-							<a href='https://semilorecalculator.vercel.app/' class="btn btn-purple rounded-pill">Details</a>
+							<a href="https://semilorecalculator.vercel.app/" class="btn btn-purple rounded-pill"
+								>Details</a
+							>
 						</div>
 					</div>
 				</div>
