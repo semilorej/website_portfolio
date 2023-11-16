@@ -1,6 +1,11 @@
 <script>
 	import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-	import 'jquery/dist/jquery.min.js';
+
+	let isNavbarOpen = false;
+
+	function toggleNavbar() {
+		isNavbarOpen = !isNavbarOpen;
+	}
 
 	let testimonials = [
 		{
@@ -95,30 +100,35 @@
 			<a class="navbar-brand brand-name" href="/">Semilore</a>
 			<button
 				class="navbar-toggler"
-				type="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#navbarNav"
+				on:click={toggleNavbar}
+				aria-expanded={isNavbarOpen ? 'true' : 'false'}
+				aria-label="Toggle navigation"
 			>
 				<span class="navbar-toggler-icon" />
 			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#portfolio">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#testimonials">Testimonials</a>
-					</li>
-					<li class="nav-item">
-						<a href="#contact" class="btn btn-white btn-md rounded-pill text-black d-inline-block">
-							Get in touch <i class="fas fa-arrow-right" />
-						</a>
-					</li>
-				</ul>
-			</div>
+			{#if !isNavbarOpen}
+				<div class="navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#portfolio">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#testimonials">Testimonials</a>
+						</li>
+						<li class="nav-item">
+							<a
+								href="#contact"
+								class="btn btn-white btn-md rounded-pill text-black d-inline-block"
+							>
+								Get in touch <i class="fas fa-arrow-right" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			{/if}
 		</div>
 	</nav>
 
