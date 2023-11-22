@@ -1,10 +1,10 @@
 <script>
 	import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
-	let isNavbarOpen = false;
+	let isNavOpen = false;
 
-	function toggleNavbar() {
-		isNavbarOpen = !isNavbarOpen;
+	function toggleNav() {
+		isNavOpen = !isNavOpen;
 	}
 
 	let testimonials = [
@@ -100,35 +100,31 @@
 			<a class="navbar-brand brand-name" href="/">Semilore</a>
 			<button
 				class="navbar-toggler"
-				on:click={toggleNavbar}
-				aria-expanded={isNavbarOpen ? 'true' : 'false'}
+				on:click={toggleNav}
+				type="button"
 				aria-label="Toggle navigation"
 			>
 				<span class="navbar-toggler-icon" />
 			</button>
-			{#if !isNavbarOpen}
-				<div class="navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="#about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#portfolio">Portfolio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#testimonials">Testimonials</a>
-						</li>
-						<li class="nav-item">
-							<a
-								href="#contact"
-								class="btn btn-white btn-md rounded-pill text-black d-inline-block"
-							>
-								Get in touch <i class="fas fa-arrow-right" />
-							</a>
-						</li>
-					</ul>
-				</div>
-			{/if}
+
+			<div class="navbar-collapse" id="navbarNav" style="display: {isNavOpen ? 'block' : 'none'};">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#testimonials">Testimonials</a>
+					</li>
+					<li class="nav-item">
+						<a href="#contact" class="btn btn-white btn-md rounded-pill text-black d-inline-block">
+							Get in touch <i class="fas fa-arrow-right" />
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 
@@ -248,7 +244,7 @@
 						/>
 						<div class="card-body">
 							<h5 class="card-title">Eye Product Store</h5>
-							<p class="card-text">
+							<p class="card-text" style="text-align: justify;">
 								The Eye Product Store project is a visually engaging and user-friendly e-commerce
 								platform designed and developed by me. It features a sleek and modern design to
 								showcase a variety of eye-related products, including glasses, contact lenses, and
@@ -267,7 +263,7 @@
 						<img src="/Todo.png" class="card-img-top" alt="Project 2" style="height: 200px;" />
 						<div class="card-body">
 							<h5 class="card-title">To-do List App</h5>
-							<p class="card-text">
+							<p class="card-text" style="text-align: justify;">
 								The TodoList App project is a practical and efficient task management tool that I
 								developed as part of my web development portfolio. It offers a clean and intuitive
 								user interface, allowing users to easily create, organize, and prioritize their
@@ -287,7 +283,7 @@
 						<img src="/calculator.png" class="card-img-top" alt="Project 3" />
 						<div class="card-body">
 							<h5 class="card-title">Calculator app</h5>
-							<p class="card-text">
+							<p class="card-text" style="text-align: justify;">
 								The Calculator App project is a functional and user-friendly application that I
 								developed for my web development portfolio. It provides a sleek and responsive
 								interface for performing basic arithmetic operations such as addition, subtraction,
@@ -309,8 +305,8 @@
 			<h2 class="mb-4 text-center">Testimonials</h2>
 			<div class="row">
 				{#each testimonials as testimonial (testimonial.id)}
-					<div class="col-md-6">
-						<p style="text-justify: auto;">{testimonial.text}</p>
+					<div class="col-md-6 pb-5">
+						<p style="text-align: justify;">{testimonial.text}</p>
 						<small class="text-muted">
 							- {testimonial.author}, {testimonial.position}
 						</small>
@@ -433,8 +429,9 @@
 
 	/* The rest of your existing styles */
 	.brand-name {
-		font-size: 2rem;
-		color: white; /* Change the color to white */
+		font-size: 1rem;
+		font-weight: 900;
+		color: white;
 	}
 
 	.animated-background {
